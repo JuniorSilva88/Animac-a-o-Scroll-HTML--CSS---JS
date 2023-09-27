@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #ffff;
+    margin: 50px;
+}
+
+h2{
+    text-align: center;
+    font-size: 100px;
+}
+
+p {
+    font-size: 50px;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
