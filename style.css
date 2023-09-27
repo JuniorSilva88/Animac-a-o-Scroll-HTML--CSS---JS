@@ -28,8 +28,37 @@ section {
 
 .hidden {
     opacity: 0;
+    filter: blur(18px);
+    transform: translateX(-100%);
+    transition: all 1.2s;
 }
 
 .show {
     opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1.2s;
+}
+
+.logos{
+    display: flex;
+    gap: 20px;
+}
+.avatar {
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.logos :nth-child(2){
+    transition-delay: 400ms;
+}
+
+.logos :nth-child(3){
+    transition-delay: 700ms;
+}
+
+.logos :nth-child(4){
+    transition-delay: 1000ms;
 }

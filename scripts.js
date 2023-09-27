@@ -1,7 +1,17 @@
-const lastOne = document.querySelector(".last-one")
+/*const lastOne = document.querySelector(".last-one")*/
 
-const myObserver = new IntersectionObserver( (entries) => {
-    console.log(entries)
+const myObserver = new IntersectionObserver ((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        }else{
+            entry.target.classList.remove('show')
+        }
+    })
 })
 
-myObserver.observe (lastOne)
+const elements = document.querySelectorAll( '.hidden')
+
+elements.forEach ((element) => myObserver.observe(element))
+
+/*myObserver.observe (lastOne)*/
